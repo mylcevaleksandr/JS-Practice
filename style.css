@@ -1,20 +1,45 @@
-.card-1{
- text-align: center;
+body{
+    background-color: rgb(175, 252, 209);
 }
-.grid-container{
+#myDiv {
+    text-align: center;
+    
+}
+.next{
+    margin: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 2; 
+    border-radius: 10px;
+    background-color: greenyellow ;
+    color: rgb(55, 0, 255);
+}
+.card{
+    display: none;
+}
+.grid-container {
     display: inline-grid;
     grid-template-columns: auto auto auto auto auto ;
     background-color: #2196F3;
     padding: 10px;
 }
-.grid-item {
+.grid-container > div {
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid black;
     padding: 20px;
-    font-size: 30px;
+    font-size: 1.5rem;
     text-align: center;
 }
-.one-hundred {
-    font-size: 10px;
 
+.grid-item1 { 
+    grid-column-start: 4;
+    grid-column-end: 6;
 }
+ .grid-item2 {
+    grid-column-start: 2; 
+    grid-column-end: 4;
+  }
+
+  

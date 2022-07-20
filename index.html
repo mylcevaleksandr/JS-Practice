@@ -7,13 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GuessANumber</title>
     <script src = "myScript.js"> </script>
-    <link rel="stylesheet" href="style.css"
+    <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
- <div class="card-1">
+<h1 id="numbers"></h1>
+<section id="myDiv">
+   <h1></h1>
+   <button id="yes">yes</button>
+   <button class="next yes" onclick="plusSlides(1)">Yes</button>
+   <button class="next" onclick="plusSlides(1)">No</button>
+   
+ <div class="card">
    <div class="grid-container">
-    <div class="grid-item">1</div>
+    <div id="1" class="grid-item">1</div>
     <div class="grid-item">21</div>
     <div class="grid-item">41</div>
     <div class="grid-item">61</div>
@@ -63,10 +69,11 @@
     <div class="grid-item">59</div>
     <div class="grid-item">79</div>
     <div class="grid-item">99</div>
+   
    </div>
 </div> 
 
-<div class="card-2">
+<div class="card">
     <div class="grid-container">
      <div class="grid-item">2</div>
      <div class="grid-item">22</div>
@@ -121,7 +128,7 @@
     </div>
  </div>
     
- <div class="card-3">
+ <div class="card">
     <div class="grid-container">
      <div class="grid-item">4</div>
      <div class="grid-item">22</div>
@@ -167,15 +174,15 @@
      <div class="grid-item">38</div>
      <div class="grid-item">60</div>
      <div class="grid-item">78</div>
-     <div class="grid-item"  class="one-hundred">100</div>
      <div class="grid-item">21</div> 
      <div class="grid-item">39</div> 
      <div class="grid-item">61</div> 
      <div class="grid-item">79</div>
-    </div>
+     <div class="grid-item1">100</div>
+   </div>
  </div>
 
- <div class="card-4">
+ <div class="card">
     <div class="grid-container">
      <div class="grid-item">8</div>
      <div class="grid-item">26</div>
@@ -228,7 +235,7 @@
     </div>
  </div>
 
- <div class="card-5">
+ <div class="card">
     <div class="grid-container">
      <div class="grid-item">16</div>
      <div class="grid-item">26</div>
@@ -281,7 +288,7 @@
     </div>
  </div>
 
- <div class="card-6">
+ <div class="card">
     <div class="grid-container">
      <div class="grid-item">32</div>
      <div class="grid-item">40</div>
@@ -318,7 +325,7 @@
     </div>
  </div>
 
- <div class="card-7">
+ <div class="card">
     <div class="grid-container">
      <div class="grid-item">64</div>
      <div class="grid-item">72</div>
@@ -344,7 +351,6 @@
      <div class="grid-item">76</div>
      <div class="grid-item">84</div>
      <div class="grid-item">92</div>
-     <div class="grid-item">100</div>
      <div class="grid-item">69</div>
      <div class="grid-item">77</div>
      <div class="grid-item">85</div>
@@ -357,7 +363,9 @@
      <div class="grid-item">79</div>
      <div class="grid-item">87</div>
      <div class="grid-item">95</div>
+     <div class="grid-item2">100</div>
     </div>
  </div>
+</section>
 </body>
 </html>
