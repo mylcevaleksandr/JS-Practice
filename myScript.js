@@ -1,7 +1,24 @@
 
+function numberCount() 
+ { 
+  let cardStyle = document.querySelector('.card');
+  let computed = window.getComputedStyle(cardStyle).display;
+  let text =  document.querySelector('#one')
+  textContent = text.textContent;
+  
+    console.log(computed,textContent);
+   }
+
+const btn = document.querySelector(".yes");
+btn.addEventListener("click" , numberCount );
+
+
+
+
+
  
 
-let slideIndex = 0;
+let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -17,26 +34,15 @@ function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("card");
   if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
+  // if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
+
   }
  
   slides[slideIndex-1].style.display = "block"; 
 
-}
+  
+  
 
-if(document.getElementById("yes").clicked == true)
- {alert("yes");
-}
-
-/*const element = document.getElementsByClassName("yes") 
-element.addEventListener("click", () => { alert ("hello"); });
-
- 
-/*function plusSlides(n) {
-  yesAnswers.push(1);
-  document.getElementById("numbers").innerHTML = plusSlides;
-}
-
-*/
+}  
