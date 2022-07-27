@@ -1,5 +1,5 @@
 
-const baseNumbers = [1, 2, 4, 8, 16, 32, 64,];
+const baseNumbers = [0, 1, 2, 4, 8, 16, 32, 64,];
 let newNumbers = [];
 let calc = 0;
 let result
@@ -11,12 +11,13 @@ let result
 
 function numberCount() 
  { 
-  if (calc < baseNumbers.length) {
+  if (calc < 7) {
 newNumbers.push(baseNumbers[calc++]);
   }
-  else if (calc = baseNumbers.length)  {   
+  else if (calc = newNumbers.length)  {   
     let add=(a,b) => a+b
-  let result = newNumbers.reduce(add);
+   result = newNumbers.reduce(add);
+  alert(result)
   }
   // else if( calc = baseNumbers.length){ for (let i = 0; i < newNumbers.length; i++) {
     // result += newNumbers[i];
@@ -28,12 +29,12 @@ newNumbers.push(baseNumbers[calc++]);
 
  function numberCountNo()
 { 
-  if (calc < baseNumbers.length) {
+  if (calc < 7) {
 calc++  
 }
-else if (calc = baseNumbers.length) {let add=(a,b) => a+b
-  let result = newNumbers.reduce(add);
- alert(result);
+else if (calc = newNumbers.length) {let add=(a,b) => a+b
+    result = newNumbers.reduce(add);
+ alert(result)
 }
 // else if( calc = baseNumbers.length){ for (let i = 0; i < newNumbers.length; i++) {
   // result += newNumbers[i];
