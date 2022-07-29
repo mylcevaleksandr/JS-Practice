@@ -1,62 +1,44 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.querySelector(".yes");
+  const btnNo = document.querySelector(".not");
+  const tryAgain = document.querySelector(".try");
+  const modalWrapper = document.querySelector('.wrapper__modal');
+  const outResult = modalWrapper.querySelector(".result");
+  const baseNumbers = [ 1, 2, 4, 8, 16, 32, 64,];
+  let newNumbers = [];
+  let baseIndex = 0;
+  let result;
 
-const baseNumbers = [0, 1, 2, 4, 8, 16, 32, 64,];
-let newNumbers = [];
-let calc = 0;
-let result
-
-// function sumArray() {
+ tryAgain.addEventListener("click", () =>  { 
+   document.location.reload()
   
-  // }
-// }
+ })
 
-function numberCount() 
- { 
-  if (calc < 7) {
-newNumbers.push(baseNumbers[calc++]);
-  }
-  else if (calc = newNumbers.length)  {   
-    let add=(a,b) => a+b
-   result = newNumbers.reduce(add);
-  alert(result)
-  }
-  // else if( calc = baseNumbers.length){ for (let i = 0; i < newNumbers.length; i++) {
-    // result += newNumbers[i];
-    // console.log(result)};
-  //  }
-  }
-
-
-
- function numberCountNo()
-{ 
-  if (calc < 7) {
-calc++  
-}
-else if (calc = newNumbers.length) {let add=(a,b) => a+b
-    result = newNumbers.reduce(add);
- alert(result)
-}
-// else if( calc = baseNumbers.length){ for (let i = 0; i < newNumbers.length; i++) {
-  // result += newNumbers[i];
-  // console.log(result)};  
-// }
-}  
-
-
-
-
-const btn = document.querySelector(".yes");
-btn.addEventListener("click" , numberCount );
-
-const btnNo = document.querySelector(".not");
-btnNo.addEventListener("click" , numberCountNo );
-
-
-
-
-
-
+ btn.addEventListener("click" , () => {
+ numberCount();
+ plusSlides(1);
  
+ if (baseIndex === baseNumbers.length) {
+  result = newNumbers.reduce((a,b) => a+b);
+  modalWrapper.style.display = "block";
+  outResult.innerText = `Вы загадали: ${result}`; // = 'Your number:' + result
+
+ }
+
+ })
+
+
+ btnNo.addEventListener("click" , ()=> {
+  numberCountNo();
+  plusSlides(1)
+  if ( baseIndex === baseNumbers.length) {
+    result = newNumbers.reduce((a,b) => a + b);
+    modalWrapper.style.display = "block";
+    outResult.innerText = `Вы загадали: ${result}`; // = 'Your number:' + result
+  }
+ })
+
+
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -82,7 +64,18 @@ function showSlides(n) {
  
   slides[slideIndex-1].style.display = "block"; 
 
-  
-  
+} 
 
+function numberCount() 
+{ 
+  newNumbers.push(baseNumbers[baseIndex++]);
+}
+
+function numberCountNo()
+{ 
+baseIndex++  
 }  
+
+
+
+})

@@ -10,14 +10,17 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-<h1 id="numbers"></h1>
+<body>
+ <div class="clark"> <span>Любая достаточно развитая технология неотличима от магии. 
+   © Артур Кларк </span></div>
+<div class="clark2"><span>Загадайте любое число от одного до ста , внимательно изучите следующие 7
+    карточек с числами, если загаданное Вами число есть на карточке жмите (Есть) или 
+    (Нет) соответственно... Поехали!!!</span></div>
 <section id="myDiv">
    
-   <button class="next yes" onclick="plusSlides(1)">Yes</button>
-   <button class="next not" onclick="plusSlides(1)">No</button>
-   <div class="card">
-      <h1>Вы готовы начать ?</h1>
-   </div>
+   <button class="next yes" >Есть</button>
+   <button class="next not" >Нет</button>
+   
  <div class="card">
    <div class="grid-container">
     <div class="grid-item">1</div>
@@ -385,8 +388,16 @@
     </div>
  </div>
  
+ <div class="wrapper__modal">
+   <div class="modal">
+      <div class="result"></div>
+      <button class="try">Попробовать снова</button>
+
+    </div>
+</div>
 
 </section>
+
 <script src = "myScript.js"> </script>
 </body>
 </html>
